@@ -40,6 +40,8 @@
                     }
                 }
             }
+            if (isset($_POST['sign'])) 
+        header('Location: index.html');
             mysqli_close($con);
         ?>
 
@@ -50,30 +52,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes,initial-scale=1, maximum-scale=3, minimum-scale=1">
     <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="crear_c.css">
 </head>
 <body>
-   <h1>Crear nueva cuenta</h1>
-    <div>
+   
+    <div class="login-box">
+    <h1>Crear nueva cuenta</h1>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
-            <div>               
+            <div class="textbox">  
+            <i class="fas fa-user"></i>              
                 <input type="text" name="nombre" placeholder="Escribe tu nombre" required>      
             </div>
           
-            <div>               
-                <input type="email" name="email" aria-describedby="emailHelp" placeholder="Escribe tu dirección de Correo" required>
+            <div class="textbox">
+            <i class="fas fa-user"></i>               
+                <input type="email" name="email" aria-describedby="emailHelp" placeholder="Dirección de Correo" required>
             </div>
           
-          <div>             
+          <div class="textbox">   
+          <i class="fas fa-lock"></i>          
                 <input type="password" name="password" placeholder="Ingresa tu nueva contraseña" required>
 
             </div>
             
-          <input type="submit" name="submit" value="Enviar">
+          <input type="submit" name="submit" class="btn" value="Crear">
         </form>
       <br>
 
       <div>
-          <a href="index.html">Iniciar Sesion</a>
+          <a class="btn" href="index.html">Sign in</a>
+      <!--<input type="submit" name="sign" class="btn" value="Sign in">-->
       </div>
     </div>
 </body>
