@@ -5,21 +5,27 @@
         <title>Mí página Web</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=3,minimum-scale=1">
+    <link rel="stylesheet" href="tabla.css">
     </head>
     <body>
-       <div>
-           <h1>.:: Administrar Contáctos ::.</h1>
-           <table border="2">
+       <div class="main">
+           <h1>Administrar Contáctos</h1>
+           <table class="content-table" >
+               <thead>
+                   <tr>
                <th>No.</th>
                <th>Nombre</th>
                <th>Apellidos</th>
                <th colspan="2">Acciones</th>
+               </tr>
+               </thead>
                <?php 
                 include 'conexion.php';
                 $sel=$con -> query("select * from dos");
                 while ($fila=$sel->fetch_assoc())
                 {
                   ?>
+                  <tbody>
                   <tr>
                       <td><?php echo $fila['id']?></td>
                       <td><?php echo $fila['nombre']?></td>
@@ -29,8 +35,13 @@
                   </tr>      
            <?php
                 } ?>
+                </tbody>
            </table>
-           <a href="menu.php">Menú Principal</a>
+          
        </div>
+      
     </body>
+    <footer>
+    <center> <a class="link" href="menu.php">Menú Principal</a></center>
+    </footer>
 </html>
