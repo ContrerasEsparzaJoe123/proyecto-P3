@@ -41,10 +41,12 @@
 				$_SESSION['start'] = time();
 				$_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;						
                 
+
                 header('Location: ./menu.php');
 				/*echo "<div role='alert'><strong>Bienvenido(a)!</strong> $row[nombre]</div>
                 <div><a href='menu.php'>Menú principal</a></div>";*/
 			} else {
+                echo "<script>location.href='index.html'</script>";
 				echo "<div role='alert'>El correo o la contraseña son incorrectos, intenta de nuevo.
 				<p><a href='index.html'><strong>Por favor, intenta de nuevo.</strong></a></p></div>";			
 			}	

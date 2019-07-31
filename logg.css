@@ -12,7 +12,7 @@ body{
 
 .loginbox{
     width: 320px;
-    height: 480px;
+    height: 420px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     top: 50%;
@@ -76,89 +76,3 @@ h1{
     background: #4caf50;
     color: #000;
 }
-
-a {
-    background-color: #0A841B;
-  color: white;
-  height: 40px;
-  text-decoration: none;
- font-size: 18px;
-    border-radius: 20px;
-    padding: 10px 75px;
-}
- a:hover {
-  background-color: #4caf50;
-}
- a:active {
-  background-color: #4caf50;
-}
- a:visited {
-  background-color: #0A841B;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

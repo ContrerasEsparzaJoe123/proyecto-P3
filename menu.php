@@ -1,3 +1,14 @@
+<?php
+/*
+if (null !==($_SESSION['loggedin'] = true));
+{ 
+    header("Location: index.html");
+    die();
+}
+else {
+    include 'check_login.php';
+}*/
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>

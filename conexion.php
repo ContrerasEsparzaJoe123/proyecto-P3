@@ -1,3 +1,3 @@
 <?php 
-  $con=new mysqli('127.0.0.1','root','','giraffe');  
+  $con=new mysqli('127.0.0.1','root','','hola2');  
 ?>

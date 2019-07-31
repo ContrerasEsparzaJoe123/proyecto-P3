@@ -14,11 +14,12 @@ if (isset($_POST['submit'])) {
 
         if(move_uploaded_file($_FILES['fichero']['tmp_name'], $upload)) { //movemos el archivo a su ubicacion 
                     
-                    echo "<b>Upload exitoso!. Datos:</b><br>";  
+          echo "<script>location.href='ad_archivos.php'</script>";
+                   /* echo "<b>Upload exitoso!. Datos:</b><br>";  
                     echo "Nombre: <i><a href=\"".$ruta . $nombrefinal."\">".$_FILES['fichero']['name']."</a></i><br>";  
                     echo "Tipo MIME: <i>".$_FILES['fichero']['type']."</i><br>";  
                     echo "Peso: <i>".$_FILES['fichero']['size']." bytes</i><br>";  
-                    echo "<br><hr><br>";  
+                    echo "<br><hr><br>"; */ 
                          
 
 
@@ -35,16 +36,30 @@ if (isset($_POST['submit'])) {
     }  
  } 
 ?> 
-
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="archivos.css">
+  <title>Subir Archivos</title>
+</head>
             <body> 
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-               <h1>Subir Archivos</h1>  
-                Seleccione archivo: <input name="fichero" type="file" size="150" maxlength="150">  
-                <br><br> Nombre: <input name="nombre" type="text" size="70" maxlength="70"> 
-                <br><br> Descripcion: <input name="description" type="text" size="100" maxlength="250"> 
-                <br><br> 
-              <input name="submit" type="submit" value="SUBIR ARCHIVO"> 
-             
-              <a href="ad_archivos.php">Administración de Archivos</a>  
+              <div class="main">
+              <p class="sign" align="center">Subir Archivos</p>
+            <form class="form1" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+                 
+                
+                <input class="un "name="nombre" type="text"  align="center" placeholder="Nombre del Archivo"> 
+                <input class="pass" name="description" type="text" align="center" placeholder="Descripcion"> 
+                
+                <center><div class="file-input-wrapper">
+                 <button class="btn-file-input">Upload File</button>
+                    <input type="file" name="fichero" />
+                  </div></center>
+                <br>
+             <center><input  name="submit" type="submit" value="SUBIR ARCHIVO"> </center>
+             <br>
+              <center><a href="ad_archivos.php">Administración de Archivos</a></center>
             </form>  
+            </div>
             </body>
